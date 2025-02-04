@@ -1,3 +1,34 @@
+### Ruby ###
+*.gem
+*.rbc
+/.config
+/coverage/
+/InstalledFiles
+/pkg/
+/spec/reports/
+/spec/examples.txt
+/test/tmp/
+/test/version_tmp/
+/tmp/
+
+# Used by dotenv library to load environment variables
+.env
+
+# Specific to RubyMotion:
+.dat*
+.repl_history
+build/
+*.bridgesupport
+
+# Environment normalization
+/.bundle/
+/vendor/bundle
+/lib/bundler/man/
+
+# RubyMine project files
+.idea/
+
+### Java ###
 # Compiled class file
 *.class
 
@@ -19,6 +50,31 @@
 *.tar.gz
 *.rar
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+# virtual machine crash logs
 hs_err_pid*
 replay_pid*
+
+### IDE/Editor files ###
+# VS Code
+.vscode/
+*.code-workspace
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# IntelliJ IDEA
+*.iml
+*.iws
+.idea/
+out/
+
+### OS generated files ###
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db

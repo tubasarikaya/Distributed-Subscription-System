@@ -1,60 +1,28 @@
-# Distributed Subscription System
+# Dağıtık Abonelik Sistemi (Distributed Subscriber Service)
 
-A fault-tolerant distributed subscription system implemented using Transport Layer communication functions across multiple programming languages (Ruby, Python, and Java). This project was developed as part of a socket programming course.
+22060344 Elif Sude ÇETİNKAYA
+22060385 Zeynep Ravza DURSUN
+22060374 Tuba SARIKAYA
 
-## Project Team
+### plotter.py
 
-- Tuba Sarıkaya
-- Elif Sude Çetinkaya
-- Zeynep Ravza Dursun
+### admin.rb
 
-## System Architecture
+- [x] serverlar ile socket üzerinden iletişim kurar.
+- [x] serverlara 5 saniyede bir kapasite sorgusu gönderir.
+- [x] serverlara birbirlerine bağlanmak için strt emri gönderir.
+- [x] strt emrine karşılık gelen mesaj isteklerini alır.
+- [x] kapasite sorgusuna karşılık gelen kapasite değerlerini alır.
 
-The system consists of two main components:
+### ServerX.java
 
-### Admin Component (admin.rb)
+- [x] admin.rbden gelen kapasite sorgusunu alır.
+- [x] gelen kapasite sorgusuna karşılık kapasite değerleri gönderir.
+- [x] admin.rbden gelen strt emrini alır.
+- [x] gelen strt emrine karşılık yep veya nope mesajları gönderir.
+- [x] istemcilerle socketler üzerinden haberleşir.
+- [x] istemcilerden subcriber nesnesi alır.
+- [x] gelen subscriber nesnelerine göre gerekli işlemleri (abone olma, abonelikten çıkma, aboneyi çevrimiçi / çevrimdışı yapma) yapar.
 
-The admin component, written in Ruby, serves as the central control unit with the following capabilities:
-
-- Establishes socket-based communication with servers
-- Performs capacity queries to servers every 5 seconds
-- Sends start commands (strt) to servers for inter-server communication
-- Handles response messages for start commands
-- Processes capacity values received from capacity queries
-
-### Server Component (ServerX.java)
-
-The server component, implemented in Java, handles client interactions and admin commands:
-
-#### Admin Communication
-- Receives and processes capacity queries from admin
-- Sends capacity values in response to queries
-- Processes start commands (strt) from admin
-- Responds with "yep" or "nope" messages to start commands
-
-#### Client Management
-- Maintains socket-based communication with clients
-- Processes incoming subscriber objects
-- Handles subscription-related operations:
-  - New subscriptions
-  - Subscription cancellations
-  - Online/offline status management
-
-## Implementation Status
-
-This project is a work in progress and represents the initial implementation of the distributed subscription system. The current version includes basic functionality for admin-server communication and client management.
-
-## Features Implemented
-
-- Socket-based communication between components
-- Periodic capacity monitoring
-- Server interconnection protocol
-- Basic subscription management
-- Client status tracking
-
-## Technologies Used
-
-- Ruby
-- Java
-- Socket Programming
-- Transport Layer Protocols
+Sunum Videosu Linki:
+https://drive.google.com/file/d/1c_x8DlbgNzi5RSm2wrm_Z2JCiVdy_NjV/view?usp=sharing

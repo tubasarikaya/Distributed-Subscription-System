@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package communication;
+
+message Subscriber {
+    DemandType demand = 1;
+    uint32 ID = 2;
+    string name_surname = 3;
+    int64 start_date = 4;
+    int64 last_accessed = 5;
+    repeated string interests = 6;
+    bool isOnline = 7;
+}
+
+enum DemandType {
+    SUBS = 0;
+    ONLN = 1;
+    OFFL = 2;
+    DEL = 3;
+}
